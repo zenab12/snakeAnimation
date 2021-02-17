@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Animation</title>
+    <style>
+    .snake
+    {
+        width:100px;
+        height:20px;
+        margin:300px auto;
+        position:relative;
+       
+    }
+    .snake span
+    {   width:10px;
+        display:block;
+        position:absolute;
+        height:50px;
+        background-color:cornflowerblue;
+        animation: snake 1.5s infinite ease-in-out;
+        border-radius:50%;
+        opacity:.5;
+        left:0px;
+        top:0px;
+        bottom:0px;
+        right: 0px;
+        
+    }
+    
+    .snake span:nth-of-type(2)
+    {
+        left: 20px;
+        animation-delay: .2s
+    }
+    .snake span:nth-of-type(3)
+    {
+        left: 40px;
+        animation-delay: .4s
+    }
+    .snake span:nth-of-type(4)
+    {
+        left: 60px;
+        animation-delay: .6s
+    }
+    .snake span:nth-last-of-type
+    
+    {
+        left: 80px;
+        animation-delay: .8s;
+    }
+    
+    @keyframes snake
+    {
+        0%
+        {   
+            opacity: .3;
+            transform: translateY(0px);
+            background-color: chartreuse;  
+           
+        }
+        50%
+        {   height:5px;
+            opacity:1;
+            transform: translateY(1px);
+            background-color: rebeccapurple;
+          
+        }
+        
+            0%,100%
+        {   
+            opacity: .3;
+            transform: translateY(0px);
+            background-color: chartreuse;  
+            transform: rotateX(10deg);
+        }
+        
+    }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="snake">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> 
+
+</body>
+</html>
